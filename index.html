@@ -20,101 +20,75 @@
 
 <body>
 
-  <!-- <div id="allentername" class="entername" style="width:100%; height:100vh;">
-      <div class="enternamea w-25 bg-light mx-auto pt-2 pb-2 text-center" style="margin-top: 12%;">
-        <p class="text-center battle mt-2">C'est quoi ton petit nom ?</p>
-          <input id="enternameid" class="inputname w-75" type="" placeholder=""/>
-          <input id="validateenter" class=" validate mt-2" type="button" value="Valider"/>
-      </div>
-  </div> -->
 
-  <div class="name d-flex w-100 justify-content-around">
-      <div class="allplayer">
-      <p id="playername" class="tag"></p>
-      <p id="try" class="try"></p>
-    </div>
-  </div>
 
   <div class="container-fluid">
 
+  <div class="row">
+
+    <div class="d-flex m-auto" id="start_game">
+        <img src="img/start.png" alt="start" border ="0" class="img-fluid d-block mx-auto start" onclick="start()">
+    </div>
+
+</div>
+
     <div class="row">
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('0')" >
       </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('1')">
       </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('2')">
       </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
-      </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
-      </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('3')">
       </div>
     </div>
 
     <div class="row">
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('4')">
       </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('5')">
       </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('6')">
       </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
-      </div>
-      <div id="case" class="case col-md-2" >
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
-      </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('7')">
       </div>
     </div>
 
     <div class="row">
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('8')">
       </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('9')">
       </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('10')">
       </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('11')">
       </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+    </div>
+
+    <div class="row">
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('12')">
       </div>
-      <div id="case" class="case col-md-2">
-        <img src="img/frontcard.png" class="backcard">
-        <div class="back"></div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('13')">
+      </div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('14')">
+      </div>
+      <div id="case" class="card">
+        <img src="img/frontcard.png" class="backcard" onclick="compare('15')">
       </div>
     </div>
 

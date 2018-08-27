@@ -97,62 +97,35 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body{
+  background-image: url("../img/bck.jpg");
+}
 /*container position*/
-
-  .container-fluid .row .case{
-    border : 1px solid black;
-    text-align: center;
+  .container-fluid .row .start{
+    width : 100px;
   }
+
 
   .container-fluid .row img{
-    width : 70%;
-    margin: 10px;
+    width : 50%;
+    height : 200%;
+    margin-left: 50px;
   }
 
-/*backcard*/
+  .container-fluid .row {
+    margin-left: 20%;
+  }
 
-.case[data-key="cry"] .back {
-  background: url('img/cry.png') no-repeat;
+.container-fluid .row .start{
+  margin-bottom: 20px;
 }
 
-.case[data-key="color"] .back {
-  background: url('img/color.jpg') no-repeat;
+.card{
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position:center;
+  width : 20%;
 }
-
-.case[data-key="dat"] .back {
-  background: url('img/dat.jpg') no-repeat;
-}
-
-.case[data-key="pdrum"] .back {
-  background: url('img/drum.jpg') no-repeat;
-}
-
-.case[data-key="tiger"] .back {
-  background:url('img/tiger.png') no-repeat;
-}
-
-.case[data-key="hope"] .back {
-  background:url('img/hope.png') no-repeat;
-}
-
-.case[data-key="pepe"] .back {
-  background: url('img/pepe.jpg') no-repeat;
-}
-
-.case[data-key="please"] .back {
-  background: url('img/please.png') no-repeat;
-}
-
-.case[data-key="troll"] .back {
-  background: url('img/troll.jpg') no-repeat;
-}
-
-.case[data-key="why"] .back {
-  background: url('img/why.jpg') no-repeat;
-}
-
-
-
 
 
 
