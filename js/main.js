@@ -1,7 +1,6 @@
 var deck_list = ["cry.png","cry.png","dat.png","dat.png","drum.png","drum.png","nope.png","nope.png","pepe.png","pepe.png","please.png","please.png","troll.png","troll.png","why.png","why.png"];
 var card = document.getElementsByClassName("card");
 var backcard = document.getElementsByClassName("backcard");
-
 var first="";
 var second="";
 var save ="";
@@ -10,10 +9,6 @@ var max_card=2;
 
 var background=0;
 var rotate = 0 ;
-
-var restart = document.getElementById("restart_game");
-restart.style.display ="none";
-
 
 //shufflle randomly
 function shuffle(array) {
@@ -40,8 +35,8 @@ function shuffle(array) {
         id2=setTimeout(display,1800);
         rotateCardStart();
         id6=setTimeout(resetMaxCard,100);
+        document.getElemenById("win").style.display="none";
 
-        restart.style.display ="none";
         //resetting
         tries = 0 ;
         score = 0 ;
