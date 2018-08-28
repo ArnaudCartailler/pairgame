@@ -2,36 +2,18 @@ var deck_list = ["cry.png","cry.png","dat.png","dat.png","drum.png","drum.png","
 var card = document.getElementsByClassName("card");
 var backcard = document.getElementsByClassName("backcard");
 
-//saving choices
-var choice1="";
-var choice2="";
-
-//saving array positions
+var first="";
+var second="";
 var save ="";
 var save2 ="";
-
-//used for timeout
-var id =""; //for checking cards
-var id2=""; //for display timeout
-var id4=""; //for rotate timeout
-var id6=""; //delay for max_card++
-
-//used to block maximum card click
 var max_card=2;
 
-//background ++
 var background=0;
-//rotate ++
 var rotate = 0 ;
 
-//hidding restart button at the start
 var restart = document.getElementById("restart_game");
 restart.style.display ="none";
 
-//rotation to make a little animation on start
-for (i=0;i<card.length;i++){
-  backcard[i].style.transform = "rotateY(90deg)";
-}
 
 //shufflle randomly
 function shuffle(array) {
@@ -51,7 +33,6 @@ function shuffle(array) {
 
 }
 
-
       //start function
       function start(){
         time=40;
@@ -60,14 +41,12 @@ function shuffle(array) {
         rotateCardStart();
         id6=setTimeout(resetMaxCard,100);
 
-        //avoid player to spam start game function
-        document.getElementById("start_game").style.display ="none";
         restart.style.display ="none";
         //resetting
         tries = 0 ;
         score = 0 ;
-        choice1="";
-        choice2="";
+        first="";
+        second="";
       }
 
       function resetMaxCard(){
@@ -78,7 +57,6 @@ function shuffle(array) {
       //function to show cards if user is losing to show him the full deck
       function rotateCardEnd(){
 
-        //hide pokeball to show the card hidden behind
         backcard[rotate].style.transform = "rotateY(90deg)";
         //going to the next card
         rotate++;
@@ -88,27 +66,15 @@ function shuffle(array) {
           clearTimeout(id4);
           rotate = 0;
         }
-        //timeout of 0.1 second on our function till the end of display
         else{
           id4=setTimeout(rotateCardEnd,100);
         }
       }
 
       function rotateCardStart(){
-        //show pokeball to hide the card behind
         backcard[rotate].style.transform = "rotateY(0deg)";
         //going to the next card
         rotate++;
-
-        //stopping the timer
-        if (rotate===card.length){
-          clearTimeout(id4);
-          rotate = 0;
-        }
-        //timeout of 0.1 second on our function till the end of display
-        else{
-          id4=setTimeout(rotateCardStart,100);
-        }
       }
 
 //display all backgroundImage
@@ -127,18 +93,17 @@ function compare(n){
 
     backcard[n].style.transform = "rotateY(90deg)";
 
-    //saving the first choice
-    if (choice1===""){
-      choice1 = deck_list[n];
+    //for the first choice
+    if (first===""){
+      first = deck_list[n];
       save=n;
     }
 
-    //when we have tje first choice we go here
+    //next step
     else {
-      //saving second choice
-      choice2 = deck_list[n];
+      second = deck_list[n];
       save2=n;
-      //comapring the 2 choices with 1s timer to let the 2 cards
+      //comapring the 2 choices
       id = setTimeout(check,800);
     }
     max_card++;
@@ -146,14 +111,13 @@ function compare(n){
 }
 
 function check(){
-  //happen only if the two choices are different
-  if (choice1 != choice2){
-    //getting back the 2 front images
+  if (first != second){
+    //when it's different
     backcard[save].style.transform = "rotateY(0deg)";
     backcard[save2].style.transform = "rotateY(0deg)";
   }
 
-  //reset
-  choice1="";
+  //reset cards
+  first="";
   max_card=0;
 }

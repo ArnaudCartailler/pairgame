@@ -101,19 +101,26 @@ body{
   background-image: url("../img/bck.jpg");
 }
 /*container position*/
-  .container-fluid .row .start{
-    width : 100px;
+
+  .container-fluid .row .go p{
+    font-size: 40px;
+    margin-right: 20px;
+    color : #320758;
+    font-family: serif;
+    font-weight: bold;
+  }
+  .container-fluid .row .start {
+    width : 40%;
+    height : 10%;
   }
 
-
-  .container-fluid .row img{
-    width : 50%;
-    height : 200%;
-    margin-left: 50px;
+  .container-fluid .row .backcard{
+    width : 40%;
+    margin-left: 30%;
   }
 
-  .container-fluid .row {
-    margin-left: 20%;
+  .container-fluid .row .card{
+    width : 20%;
   }
 
 .container-fluid .row .start{
